@@ -1,0 +1,80 @@
+
+.Navbar {
+    width: 100%;
+    background-color: #111111;
+    border-bottom: 1px solid var(--border);
+    padding: 20px 8%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.Navbar nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 35px;
+    list-style: none;
+}
+
+.Navbar nav ul li button {
+    background: none;
+    border: none;
+    color: var(--text);
+    font-size: 15px;
+    font-weight: 500;
+    font-family: inherit;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.Navbar nav ul li button:hover {
+    color: var(--primary);
+}
+
+/* Keyboard accessibility */
+.Navbar nav ul li button:focus-visible {
+    outline: 2px solid var(--primary);
+    outline-offset: 5px;
+    border-radius: 3px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .Navbar {
+        padding: 18px 5%;
+    }
+
+    .Navbar nav ul {
+        gap: 18px;
+        flex-wrap: wrap;
+    }
+
+    .Navbar nav ul li button {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .Navbar nav ul {
+        gap: 12px 18px;
+    }
+}
+
+.resume-btn {
+    display: inline-block;
+    background: var(--primary);
+    color: #111111 !important;
+    padding: 9px 16px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    border: 1px solid var(--primary);
+    transition: 0.3s ease;
+}
+
+.resume-btn:hover {
+    background: var(--hover);
+    transform: translateY(-3px);
+    box-shadow: var(--glow);
+}
