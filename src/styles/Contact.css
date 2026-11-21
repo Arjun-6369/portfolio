@@ -39,18 +39,35 @@
     font-size: 16px;
 }
 
-.contact-details ul {
-    list-style: none;
-    padding: 0;
+/* Contact Buttons */
+.contact-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 20px;
 }
 
-.contact-details ul li {
-    color: var(--text);
-    margin-bottom: 18px;
-    font-size: 15px;
+.contact-btn {
+    display: inline-block;
+    padding: 12px 24px;
+    background: var(--primary);
+    color: #111111;
+    border: 1px solid var(--primary);
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    transition: 0.3s ease;
+    text-align: center;
 }
 
-/* Responsive design */
+.contact-btn:hover {
+    background: transparent;
+    color: var(--primary);
+    transform: translateY(-4px);
+    box-shadow: var(--glow);
+}
+
+/* Responsive Design */
 @media (max-width: 768px) {
     .contact-section {
         padding: 50px 5%;
@@ -64,5 +81,15 @@
     .contact-intro,
     .contact-details {
         padding: 25px;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-buttons {
+        flex-direction: column;
+    }
+
+    .contact-btn {
+        width: 100%;
     }
 }
